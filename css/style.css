@@ -1,0 +1,208 @@
+/* Custom Font */
+@font-face {
+    font-family: 'Press Gothic Regular';
+    src: url('../fonts/PressGothic/Press Gothic Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.TLFont {
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+/*KeyFrames*/
+@keyframes imageBrighten {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 0 rgba(0,0,0,0));
+    }
+    100% {
+        filter: brightness(2) drop-shadow(0 0 10px rgba(255,255,255, 0.7));
+    }
+}
+
+body {
+    background-color: black; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    color: white;
+}
+
+/* New class for the background image container */
+.background-container {
+    position: fixed; /* Fixed position to fill the entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Behind the content */
+    background-image: url('../../images/seattle.png'); /* Add your image URL here */
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-position: center;
+    filter: 
+    blur(1.2px)
+    contrast(1.1);
+}
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: -1; /* Behind the form content */
+}
+.background-containerUA{
+    position: fixed; /* Fixed position to fill the entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Behind the content */
+    background-image: url('../images/seattlerain.gif'); /* Add your image URL here */
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-position: center;
+}
+.boat-rain-background{ 
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.boat-rain-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: 
+        blur(2.5px)
+        brightness(0.8)
+        contrast(1)            
+        hue-rotate(400deg)     
+        saturate(4);         
+}
+
+/* Center the login form in a square container */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+    backdrop-filter: blur(3px); /* Blur effect */
+    color: white;
+    padding: 50px;
+    /*border-radius: 10px;*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
+    width: 300px; /* Fixed width */
+    text-align: center; /* Center align text */
+    z-index: 1; /* Place above the background image */
+}
+/* Style the form elements */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 10px 10px 60px; /* Adjust padding for space between image and text */
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    color: white;
+    outline: none; 
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.login-form input[type="email"] {
+    background-image: url('../images/Email.png'); /* Email icon image */
+    background-size: 45px 45px;
+}
+.login-form input[type="password"]{
+    background-image: url('../images/FirefliesW.png');
+    background-size: 30px 30px;
+}
+.login-form input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    transition: color 0.3s ease-in-out;
+}
+.login-form input:focus::placeholder{
+    color: rgba(255, 255, 255, 0);
+}
+/* Style the login button */
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text */
+    border: none; /* No border */
+    /*border-radius: 5px;  Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Style the labels and headings */
+.login-form label,
+.login-form h2 {
+    font-size: 30px; 
+    color:white; /* Dark grey text */
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+/*Container for the buttons*/
+.button-container {
+    display: flex;
+    margin-left: auto;
+    padding-top: 20px;
+    gap: 10px; 
+}
+.button-containerUA{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 10px; 
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+/* Buttons */
+.Button-PS {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers the content */
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.PS-Button-Image {
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin-right: 8px; /* Space between the image and the span */
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.PS-Button-Image:hover {
+    animation: imageBrighten 0.3s forwards;
+}
+
+.Button-PS span {
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+@media screen and (max-width: 320px) {
+    .login-container {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin: 0 auto;
+    }
+
+    .button-container {
+        justify-content: center; /* Center buttons */
+        gap: 10px; /* Maintain gap between buttons */
+    }
+}

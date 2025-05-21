@@ -1,0 +1,893 @@
+/* Custom Font */
+@font-face {
+    font-family: 'Press Gothic Regular';
+    src: url('../fonts/PressGothic/Press Gothic Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.TLFont {
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure all elements include padding and border in their width/height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+}
+/*Title Customs*/
+.TLTitle{
+    animation: dramaticAppear 2 ease-in;
+    opacity: 0;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+.TLTitleSize{
+    font-size: 4em;
+}
+
+/*Key Frames*/
+@keyframes dramaticAppear {
+    0%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes textBrighten {
+    0% {
+        text-shadow: none;
+        color: #ccc;
+    }
+    100%{
+        text-shadow: 0 0 10px rgba(255,255,255,0.9);
+        color: #fff;
+    }
+}
+@keyframes imageBrighten {
+    0%{
+        filter: brightness(1) drop-shadow(0 0 0 rgba(0,0,0,0));
+    }
+    100%{
+        filter: brightness(2) drop-shadow(0 0 10px rgba(255,255,255, 0.7));
+    }
+}
+@keyframes movingGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    }
+}
+.TL-Header {
+    background-color: black; 
+    min-height: 120vh;
+    width: 100vw;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+/*Nav Bar Customs*/
+.MainNav{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(33, 36, 42, 1.1);
+    /*background-color: #21242A;*/
+    width: 100vw;
+    height: 60px;
+}
+.Nav-Table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.Nav-Column{
+    display: flex; 
+    align-items: center; 
+    flex-direction: row; 
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+/*Nav Bar Items*/
+.Logo-Nav{
+    white-space: nowrap; 
+    display: flex; 
+    align-items: center;  
+    font-size: 12px; 
+    text-align: center; 
+    line-height: 1; 
+    height: 35px;
+    width: 35px;
+    color: white;
+    transition: color 0.3s ease;
+    box-shadow: none;
+    background-color: transparent;
+}
+.Logo-Nav:hover{
+    animation: movingGlow 1.2s infinite;
+}
+/*General Buttons*/
+.Button-ANY{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 26px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-ANY .TLFont{
+    color: white;
+}
+.Button-ANY:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-ANYII{
+    margin-left: 10px;
+    font-size: 45px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Button-ANYII:hover{
+    animation: textBrighten 0.3s forwards;
+}
+/*Nav Buttons*/
+.Button-Iberian{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-Iberian .TLFont{
+    color: white;
+}
+.Button-Iberian:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-Korean{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-Korean .TLFont{
+    color: white;
+}
+.Button-Korean:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-Items-ES{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;    
+}
+.Button-Items-ES .TLFont{
+    color:white;
+}
+.Button-Items-ES:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-Items-KR{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-Items-KR .TLFont{
+    color: white;
+}
+.Button-Items-KR:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-ABOUT-ES{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-ABOUT-ES .TLFont{
+    color: white;
+}
+.Button-ABOUT-ES:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-ABOUT-KR{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-ABOUT-KR .TLFont{
+    color: white;
+}
+.Button-ABOUT-KR:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-Firefly-Log{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Fireflies-Logo{
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-right: 8px;
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+.Fireflies-Logo:hover{
+    animation: imageBrighten 0.3s forwards;
+}
+.Button-Profile-Status{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-Profile-Status .TLFont{
+    color: white;
+}
+.Button-Profile-Status:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Button-Kart{
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.Button-Kart .TLFont{
+    color: white;
+}
+.Button-Kart:hover{
+    animation: textBrighten 0.3s forwards;
+}
+/*images*/
+.BeachGIF{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 140vh;
+    object-fit: cover;
+    display: block;
+}
+/*Main Background*/
+.boat_background{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.boat_background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/*Footer*/
+.AboutUS{
+    width: auto; /*auto fixing*/
+    background-color: black;
+    color:white;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.divider{
+    border:none;
+    border-top: 1px solid #ccc;
+    width: calc(90% - 80px);
+    position: absolute;
+    left: 40px;
+    bottom: 0; 
+}
+.MapS{
+    height: 120px;
+    width: 180px;
+    margin-right: 20px;
+}
+.AboutUSII{
+    width: 100vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+}
+.Footer-Table{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.Footer-Column{
+    flex: 1;
+    max-width: 25%;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.Header-Group{
+    display: flex;
+    justify-content: center;
+}
+.AboutText{
+    margin: 0;
+    text-align: justify;
+}
+.Hidden-Files{ /*Hidden Files*/
+    margin-left: 4px;
+    display:flex;
+    text-align: justify;
+}
+.Hidden-Files:hover{
+    animation: textBrighten 0.3s forwards; 
+}
+.SocialMLogo{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    display: inline-block;
+}
+.GITLogo{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+}
+.anchor:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.Footer-Column a{
+  display: block;
+  text-decoration: none;
+  margin-top: 5px; /* Adjust link spacing */
+  color: white;
+}
+/*Item Tables*/
+#productTableContainer,
+.logs-table {
+    background-color: black;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+#productTableContainer h2,
+.logs-table h2 {
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+
+/* Style for the product table */
+#productTableContainer table,
+.logs-table table {
+    width: 80%;
+    border-collapse: collapse; /* Collapse borders for a clean look */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Light transparent background for the table */
+    /*border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures rounded corners are visible */
+}
+
+/* Style for table headers */
+#productTableContainer th,
+.logs-table th {
+    padding: 10px; /* Padding for spacing */
+    text-align: left; /* Align text to the left */
+    color: white; /* White text color */
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for headers */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+
+/* Style for table cells */
+#productTableContainer td,
+.logs-table td {
+    padding: 10px; /* Padding for spacing */
+    text-align: left; /* Align text to the left */
+    color: white; /* White text color */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+/* Style for the add-to-cart button */
+#productTableContainer .add-to-cart {
+    padding: 8px 12px; /* Padding inside the button */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text color */
+    border: 1px solid white; /* White border */
+    border-radius: 4px; /* Rounded corners */
+    border:none;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+.add-to-cart:hover {
+    color: #fff; /* Ensuring text stays white */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect */
+    border-color: rgba(255, 255, 255, 0.8); /* Slightly glowing border */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background glow */
+    animation: textBrighten 0.3s forwards;
+}
+/*PS button*/
+.Button-PS {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers the content */
+    margin-left: 10px; 
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.PS-Button-Image {
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin-right: 8px; /* Space between the image and the span */
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.PS-Button-Image:hover {
+    animation: imageBrighten 0.3s forwards;
+}
+
+.Button-PS span {
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+ /* Media Queries for Responsiveness */
+/* For devices with a maximum width of 1200px */
+@media (max-width: 1200px) {
+    .TLTitleSize {
+        font-size: 3.5em;
+    }
+
+    .Button-ANY,
+    .Button-Iberian,
+    .Button-Korean,
+    .Button-Items-ES,
+    .Button-Items-KR,
+    .Button-ABOUT-ES,
+    .Button-ABOUT-KR,
+    .Button-Profile-Status,
+    .Button-Kart {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .MainNav {
+        height: 55px;
+    }
+
+    .Logo-Nav {
+        font-size: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .Fireflies-Logo {
+        height: 35px;
+        width: 35px;
+    }
+
+    /* Adjust footer and header for responsiveness */
+    .Footer, .Header-Group {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ensure images scale correctly */
+    .bitch-gift {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For devices with a maximum width of 992px */
+@media (max-width: 992px) {
+    .TLTitleSize {
+        font-size: 3em;
+    }
+
+    .Button-ANY,
+    .Button-Iberian,
+    .Button-Korean,
+    .Button-Items-ES,
+    .Button-Items-KR,
+    .Button-ABOUT-ES,
+    .Button-ABOUT-KR,
+    .Button-Profile-Status,
+    .Button-Kart {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .MainNav {
+        height: 50px;
+    }
+
+    .Logo-Nav {
+        font-size: 9px;
+        height: 28px;
+        width: 28px;
+    }
+
+    .Fireflies-Logo {
+        height: 30px;
+        width: 30px;
+    }
+
+    /* Adjust for more compact header and footer */
+    .Header-Group, .Footer {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    /* Ensure images scale correctly */
+    .bitch-gift {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* For devices with a maximum width of 768px */
+@media (max-width: 768px) {
+    .TLTitleSize {
+        font-size: 2.5em;
+    }
+
+    .Button-ANY,
+    .Button-Iberian,
+    .Button-Korean,
+    .Button-Items-ES,
+    .Button-Items-KR,
+    .Button-ABOUT-ES,
+    .Button-ABOUT-KR,
+    .Button-Profile-Status,
+    .Button-Kart {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    .MainNav {
+        height: 45px;
+    }
+
+    .Logo-Nav {
+        font-size: 8px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .Fireflies-Logo {
+        height: 25px;
+        width: 25px;
+    }
+
+    .Header-Group, .Footer {
+        padding: 6px;
+        font-size: 0.85em;
+    }
+
+    .bitch-gift {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the image */
+    }
+    /*products table*/
+    #productTableContainer table,
+    .logs-table table {
+        width: 95%; /* Increase table width for smaller screens */
+    }
+
+    #productTableContainer th,
+    .logs-table th,
+    #productTableContainer td,
+    .logs-table td {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    #productTableContainer .add-to-cart {
+        padding: 6px 10px; /* Smaller padding for buttons */
+    }
+}
+/* For devices with a maximum width of 576px */
+@media (max-width: 576px) {
+    .TLTitleSize {
+        font-size: 2em;
+    }
+
+    .Button-ANY,
+    .Button-Iberian,
+    .Button-Korean,
+    .Button-Items-ES,
+    .Button-Items-KR,
+    .Button-ABOUT-ES,
+    .Button-ABOUT-KR,
+    .Button-Profile-Status,
+    .Button-Kart {
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+
+    .MainNav {
+        height: 40px;
+    }
+
+    .Logo-Nav {
+        font-size: 7px;
+        height: 22px;
+        width: 22px;
+    }
+
+    .Fireflies-Logo {
+        height: 20px;
+        width: 20px;
+    }
+
+    /* Ensure the navigation area has a background color */
+    .Nav-Table {
+        flex-direction: column;
+        background-color: #21242A; /* Ensure consistent background */
+        padding: 10px; /* Add some padding for spacing */
+        width: 100%; /* Ensure it takes full width */
+    }
+
+    /* Adjust the columns to show all buttons properly */
+    .Nav-Column {
+        padding: 5px 0;
+        width: 100%; /* Ensure columns are full width when stacked */
+    }
+
+    /* Ensure content doesn't overflow */
+    .Nav-Table, .Nav-Column {
+        overflow: auto; /* Enable scrolling if necessary */
+    }
+
+    /* Additional styles for better alignment and spacing */
+    .Nav-Table {
+        align-items: flex-start; /* Align items to the left */
+        gap: 5px; /* Add some spacing between buttons */
+    }
+
+    /* Footer and header adjustments for small screens */
+    .Footer, .Header-Group {
+        padding: 5px;
+        text-align: center;
+        font-size: 0.8em; /* Reduce font size for smaller screens */
+    }
+
+    /* Ensure images scale correctly and are centered */
+    .bitch-gift {
+        width: 90%;
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+    }
+    .boat_background{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: math;
+    }
+    .boat_background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+/* For devices with a maximum width of 320px */
+@media (max-width: 320px) {
+    .TLTitleSize {
+        font-size: 1.8em; /* Smaller title size for small screens */
+    }
+
+    .Button-ANY,
+    .Button-Iberian,
+    .Button-Korean,
+    .Button-Items-ES,
+    .Button-Items-KR,
+    .Button-ABOUT-ES,
+    .Button-ABOUT-KR,
+    .Button-Profile-Status,
+    .Button-Kart {
+        font-size: 9px;
+        padding: 2px 4px;
+    }
+
+    .MainNav {
+        height: 35px;
+    }
+
+    .Logo-Nav,
+    .Fireflies-Logo {
+        height: 18px;
+        width: 18px;
+    }
+
+    .Nav-Table {
+        flex-direction: column;
+        background-color: #21242A; /* Set to your desired background color */
+        padding: 8px;
+        width: 100%; /* Ensure it takes full width */
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+
+    .Nav-Column {
+        padding: 4px 0;
+        width: 100%;
+    }
+
+    /* Ensure no white space on the left */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden; /* Prevent any horizontal scrolling */
+    } 
+
+    /* Additional styles for better alignment and spacing */
+    .Nav-Table {
+        align-items: flex-start;
+        gap: 3px; /* Add some spacing between buttons */
+    }
+
+    .Footer, .Header-Group {
+        padding: 4px;
+        text-align: center;
+        font-size: 0.75em; /* Smaller font size for better fit */
+    }
+
+    /* Ensure images scale correctly and are centered */
+    .bitch-gift {
+        width: 100%;
+        height: auto;
+        margin: 0 auto; /* Center the image */
+        display: block;
+    }
+    .boat_background{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: math;
+    }
+    .boat_background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .Footer-Table {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center the items vertically */
+        align-items: center; /* Center the items horizontally */
+        flex-wrap: nowrap; /* Prevent items from wrapping */
+        width: 100%;
+        padding: 5px; /* Add some padding for spacing */
+        gap: 5px; /* Add spacing between items */
+    }
+
+    /* Additional adjustments to individual footer items if needed */
+    .Footer-Item {
+        width: 100%; /* Ensure each item takes full width */
+        text-align: center; /* Center-align text within items */
+        margin-bottom: 5px; /* Add space below each item */
+    }
+
+    /* Adjust text size for better readability on small screens */
+    .Footer-Item a {
+        font-size: 0.75em; /* Smaller font size for links */
+    }
+    
+    .logs-table-container {
+        overflow-x: auto; /* Enables horizontal scrolling */
+        overflow-y: hidden; /* Hides vertical overflow if not needed */
+        width: 100vw; /* Ensure container takes full viewport width */
+        box-sizing: border-box; /* Include padding/border in width */
+    }
+    
+    /* Logs table */
+    .logs-table {
+        min-width: 600px; /* Set a fixed minimum width for the table */
+        width: 100%; /* Ensure the table stretches to fit container width */
+        box-sizing: border-box;
+    }
+    
+    /* Table itself */
+    .logs-table table {
+        width: 100%; /* Ensure table takes full width of the container */
+        font-size: 10px; /* Further reduce font size for small screens */
+        border-collapse: collapse; /* Collapse borders for cleaner look */
+    }
+    
+    /* Table headers and cells */
+    .logs-table th, 
+    .logs-table td {
+        padding: 6px; /* Reduce padding for better fit */
+        white-space: nowrap; /* Prevent text wrapping for cleaner table */
+        text-align: left; /* Align text to the left */
+    }
+    
+    /* Reduce header font size for small screens */
+    .logs-table h2 {
+        font-size: 16px;
+        margin: 0;
+    }
+}
