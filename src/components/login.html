@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="background-container"></div> 
+        <div class="login-container TLFont">
+            <form method="POST" action="login.php" class="login-form">
+                <h2>SURVIVOR ID</h2>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                
+                <!-- Button container aligned to the right -->
+                <div class="button-container">
+                    <!-- Custom Login button -->
+                    <button type="submit" class="Button-PS">
+                        <img src="../../images/XButtonPS.png" alt="PS-BUTTON" class="PS-Button-Image" />
+                        <span>LOGIN</span>
+                    </button>
+                    <!-- Custom Back button -->
+                    <button type="button" class="Button-PS" onclick="window.history.back();">
+                        <img src="../../images/OButtonPS.png" alt="PS-BUTTON" class="PS-Button-Image" />
+                        <span>BACK</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </body>
+</body>
+</html>
