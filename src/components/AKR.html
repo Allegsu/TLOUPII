@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korean</title>
-    <link rel="stylesheet" href="../../css/style_products.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Korean</title>
+  <link rel="stylesheet" href="../../css/style_products.css" />
 </head>
 <body>
-    <div class="container">
-        <h1 class="page-title TLFont">Korean Products</h1>
-        <img src="../images/flags/koreaW.png" alt="KRFlag" class="flags-images">
+  <div class="container">
+    <h1 class="page-title TLFont">Korean Products</h1>
+    <img src="../../images/flags/koreaW.png" alt="KRFlag" class="flags-images" />
 
-            echo "<table class='items-table'>";
-            echo "<thead>";
-            echo "<tr><th>Item ID</th><th>Name</th><th>Origin</th><th>Description</th><th>Category Name</th><th>Image</th></tr>";
-            echo "</thead>";
-            echo "<tbody>";
-            
-            while($row = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . $row["item_id"] . "</td>";
-                echo "<td>" . $row["name"] . "</td>";
-                echo "<td>" . $row["origin"] . "</td>";
-                echo "<td>" . $row["description"] . "</td>";
-                echo "<td>" . $row["category_name"] . "</td>";
-                echo "<td><img src='" . $row["image_url"] . "' alt='" . $row["name"] . "' class='item-image'></td>";
-                echo "</tr>";
-            }
-            echo "</tbody>";
-            echo "</table>";
-    </div>
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>Item ID</th>
+          <th>Name</th>
+          <th>Origin</th>
+          <th>Description</th>
+          <th>Category Name</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Kimchi</td>
+          <td>Korea</td>
+          <td>Spicy fermented cabbage</td>
+          <td>Food</td>
+          <td><img src="../../images/products/kr/kimchi2.png" alt="Kimchi" class="item-image" /></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Soju</td>
+          <td>Korea</td>
+          <td>Popular Korean liquor</td>
+          <td>Beverage</td>
+          <td><img src="../../images/products/kr/soju-original.png" alt="Soju" class="item-image" /></td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
+
