@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korean</title>
+    <link rel="stylesheet" href="../../css/style_products.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title TLFont">Korean Products</h1>
+        <img src="../images/flags/koreaW.png" alt="KRFlag" class="flags-images">
+
+            echo "<table class='items-table'>";
+            echo "<thead>";
+            echo "<tr><th>Item ID</th><th>Name</th><th>Origin</th><th>Description</th><th>Category Name</th><th>Image</th></tr>";
+            echo "</thead>";
+            echo "<tbody>";
+            
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["item_id"] . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["origin"] . "</td>";
+                echo "<td>" . $row["description"] . "</td>";
+                echo "<td>" . $row["category_name"] . "</td>";
+                echo "<td><img src='" . $row["image_url"] . "' alt='" . $row["name"] . "' class='item-image'></td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+            echo "</table>";
+    </div>
+</body>
+</html>
