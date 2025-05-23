@@ -104,6 +104,10 @@ body, html {
     padding: 0 10px;
     box-sizing: border-box;
 }
+/*Anchor in Nav Bar*/
+.Nav-Column a{
+    text-decoration: none;
+}
 /*Nav Bar Items*/
 .Logo-Nav{
     white-space: nowrap; 
