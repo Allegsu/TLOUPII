@@ -20,24 +20,23 @@
 }
 
 body {
-    background-color: black; /* Light grey background */
+    background-color: black; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     margin: 0;
     color: white;
 }
 
-/* New class for the background image container */
 .background-container {
-    position: fixed; /* Fixed position to fill the entire screen */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* Behind the content */
-    background-image: url('../../images/seattle.png'); /* Add your image URL here */
+    z-index: -1; 
+    background-image: url('../../images/seattle.png'); 
     background-size: cover;
     background-repeat: no-repeat;  
     background-position: center;
@@ -52,17 +51,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    z-index: -1; /* Behind the form content */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
 }
 .background-containerUA{
-    position: fixed; /* Fixed position to fill the entire screen */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* Behind the content */
-    background-image: url('../images/seattlerain.gif'); /* Add your image URL here */
+    z-index: -1; 
+    background-image: url('../images/seattlerain.gif'); 
     background-size: cover;
     background-repeat: no-repeat;  
     background-position: center;
@@ -89,24 +88,23 @@ body {
         saturate(4);         
 }
 
-/* Center the login form in a square container */
 .login-container {
-    background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
-    backdrop-filter: blur(3px); /* Blur effect */
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(3px); 
     color: white;
     padding: 50px;
     /*border-radius: 10px;*/
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
-    width: 300px; /* Fixed width */
-    text-align: center; /* Center align text */
-    z-index: 1; /* Place above the background image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
+    width: 300px; 
+    text-align: center; 
+    z-index: 1; 
 }
-/* Style the form elements */
+/* Style Form Elements */
 .login-form input[type="email"],
 .login-form input[type="password"] {
     background-color: transparent;
     width: 100%;
-    padding: 10px 10px 10px 60px; /* Adjust padding for space between image and text */
+    padding: 10px 10px 10px 60px; 
     margin: 10px 0;
     border: none;
     border-radius: 5px; 
@@ -117,7 +115,7 @@ body {
     background-position: 10px center;
 }
 .login-form input[type="email"] {
-    background-image: url('../images/Email.png'); /* Email icon image */
+    background-image: url('../images/Email.png'); 
     background-size: 45px 45px;
 }
 .login-form input[type="password"]{
@@ -136,18 +134,18 @@ body {
 .login-form button {
     width: 100%;
     padding: 10px;
-    background-color: transparent; /* Transparent background */
-    color: white; /* White text */
-    border: none; /* No border */
+    background-color: transparent; 
+    color: white; 
+    border: none; 
     /*border-radius: 5px;  Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
+    cursor: pointer; 
 }
 
 /* Style the labels and headings */
 .login-form label,
 .login-form h2 {
     font-size: 30px; 
-    color:white; /* Dark grey text */
+    color:white; 
     font-family: 'Press Gothic Regular', sans-serif;
 }
 /*Container for the buttons*/
@@ -162,12 +160,12 @@ body {
     justify-content: center;
     padding-top: 20px;
     gap: 10px; 
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; 
 }
 /* Buttons */
 .Button-PS {
-    display: flex; /* Aligns items in a row */
-    align-items: center; /* Vertically centers the content */
+    display: flex; 
+    align-items: center; 
     margin-left: 10px; 
     padding: 8px 12px;
     font-size: 16px;
@@ -181,7 +179,7 @@ body {
     height: 30px;
     width: 30px;
     display: block;
-    margin-right: 8px; /* Space between the image and the span */
+    margin-right: 8px; 
     transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -194,15 +192,165 @@ body {
     font-size: 20px;
     font-family: 'Press Gothic Regular', sans-serif;
 }
+/*Cart Design*/
+.cart-title {
+    animation: imageBrighten 0.3s forwards;
+}
+/* Container style for the cart page */
+.cart-container {
+    background-color: black;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2vw;
+}
+
+/* Style for the cart table */
+.cart-table {
+    width: 90vw;
+    border-collapse: collapse; 
+    margin-top: 2vw;
+    background-color: rgba(136,110,87, 0.12); 
+    /*border-radius: 1vw; */
+    overflow: hidden; 
+}
+
+/* Style for table headers */
+.cart-table th {
+    padding: 1vw; 
+    text-align: left; 
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-bottom: 0.2vw solid rgba(255, 255, 255, 0.1); 
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+
+/* Style for table cells */
+.cart-table td {
+    padding: 1vw; 
+    text-align: left; 
+    color: white; 
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.1); 
+}
+.remove-from-cart {
+    /*margin-left: 1vw;*/
+    padding: 0.8vw 1.2vw;
+    font-size: 1.6vw;
+    background-color: transparent;
+    color: white; 
+    /*border: 0.1vw solid white; White border */
+    border: none;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.remove-from-cart .TLFont {
+    color: white;
+}
+.remove-from-cart:hover {
+    animation: textBrightenR 0.3s forwards;
+}
+
+/* Styling for the entire empty cart message */
+/*
+.empty-cart-message {
+    font-size: 20vw;
+    font-family: 'Press Gothic Regular', sans-serif;
+    position: absolute;
+    bottom: 4vh; 
+    right: 6vw; 
+    text-align: right; 
+    margin: 0; 
+}
+
+/* Styling for the word "EMPTY" */
+.empty-cart-message .empty-text {
+    color: white; 
+}
+
+/* Styling for the word "CART" */
+.empty-cart-message .cart-text {
+    color: grey; 
+}
+*/
+
+/*log output*/
+.user-info {
+    position: relative; 
+    /*top: 20px;*/
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.profile-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #333; 
+}
+/* Styling for the user details text */
+.user-details {
+    color: white;
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 14px;
+}
+/* Profile Image */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+/* Life Bar */
+.life-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 200%;
+    border: 3px solid transparent;
+    border-top-color: #fff; 
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    animation: animateLifeBar 5s linear infinite; 
+}
+/* Styling for the user details text */
+.user-details {
+    color: white;
+    font-family: 'Press Gothic Regular', sans-serif;
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 14px;
+}
 @media screen and (max-width: 320px) {
     .login-container {
-        width: 90%; /* Adjust width for smaller screens */
-        padding: 10px; /* Reduce padding for smaller screens */
+        width: 90%; 
+        padding: 10px; 
         margin: 0 auto;
     }
 
     .button-container {
-        justify-content: center; /* Center buttons */
-        gap: 10px; /* Maintain gap between buttons */
+        justify-content: center; 
+        gap: 10px; 
     }
 }
