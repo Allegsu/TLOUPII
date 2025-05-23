@@ -18,6 +18,34 @@
         filter: brightness(2) drop-shadow(0 0 10px rgba(255,255,255, 0.7));
     }
 }
+@keyframes textBrighten {
+    0% {
+        text-shadow: none;
+        color: #ccc;
+    }
+    100% {
+        text-shadow: 0 0 1vw rgba(255, 255, 255, 0.9);
+        color: #fff;
+    }
+}
+@keyframes textBrightenR {
+    0% {
+        text-shadow: none;
+        color: #ccc;
+    }
+    100% {
+        text-shadow: 0 0 1vw rgba(255, 0, 0, 0.9);
+        color: #ff0000;
+    }
+}
+@keyframes animateLifeBar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 body {
     background-color: black; 
@@ -342,6 +370,112 @@ body {
     margin: 0;
     font-size: 14px;
 }
+/*Classified Page*/
+.TL-Header {
+    background-color: black;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    filter: blur(0.8px);
+    transition: color 0.3s ease, text-shadow 0.3 ease;
+}
+.HS_HEADERS:hover{
+    animation: textBrighten 0.3s forwards;
+}
+.header-content {
+    position: absolute;
+    top: 50%; 
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    margin-left: 20px;
+}
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: blur(0.5px);
+}
+/*Location, Vision and Mission Styling*/
+/*Location*/
+.container {
+    background-color: black;
+    min-height: 120vh;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Table Styles */
+.topics-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: inherit; 
+    font-size: 1em;
+    text-align: left;
+    position: relative; /* Important for pseudo-element positioning */
+}
+
+.topics-table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(20px); /* Increased blur amount */
+    z-index: -1; /* Place the blur behind the table content */
+}
+
+.topics-table th, .topics-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1); /* More translucent background */
+    position: relative; /* Ensures the content is above the blur */
+}
+
+.topics-table th {
+    background-color: rgba(51, 51, 51, 0.3); /* More translucent background */
+    color: white;
+}
+
+.topics-table tr:nth-child(even) {
+    background-color: rgba(68, 68, 68, 0.3); /* More translucent background */
+}
+
+.topics-table tr:nth-child(odd) {
+    background-color: rgba(85, 85, 85, 0.3); /* More translucent background */
+}
+/*Anchor inherit (keep it mind)*/
+a{
+    text-decoration: none;
+    color:inherit
+}
+/*Vision*/
+
 @media screen and (max-width: 320px) {
     .login-container {
         width: 90%; 
