@@ -14,31 +14,34 @@
     <div class='life-bar'></div>
     </div>
     <div class='user-details'>
-    <p class='user-name'>SURVIVOR: <strong>{$userName}</strong></p>
-    <p class='user-email'>BROADCAST: {$userEmail}</p>
+    <p class='user-name'>SURVIVOR: Ellie Williams</p>
+    <p class='user-email'>BROADCAST: building@floodedcity.com</p>
     </div>
     </div>
 
-    <p class="empty-cart-message"><span class="empty-text">EMPTY</span> <span class="cart-text">CART</span>...</p>
+    <p class="empty-cart-message">
+        <span class="empty-text">EMPTY</span> <span class="cart-text">CART</span>...
+    </p>
+
     <h2 class='cart-title TLFont'>SURVIVAL KIT</h2>
     <table class='cart-table'>
     <tr class='cart-header'><th>Product Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Actions</th></tr>
             <tr class='cart-item'>
-            <td class='product-name'>{$item['product_name']}</td>
-            <td class='product-quantity'>{$item['quantity']}</td>
-            <td class='product-price'>€{$item['price']}</td>
-            <td class='product-total'>€{$lineTotal}</td>
+            <td class='product-name'>Rags</td>
+            <td class='product-quantity'>5</td>
+            <td class='product-price'>2€</td>
+            <td class='product-total'>2€</td>
             <td class='product-actions'><button class='remove-from-cart' data-product-id='{$productID}'>LEAVE BEHIND</button></td>
             </tr>
-        <tr class='cart-total-row'><td colspan='3' class='total-label'>Total</td><td colspan='2' class='total-amount'>€{$total}</td></tr>
+        <tr class='cart-total-row'><td colspan='3' class='total-label'>Total</td><td colspan='2' class='total-amount'>2€</td></tr>
         </table>
 
-        <div class="button-container">
-            <button class="Button-PS" onclick="window.history.back()">
+        <div class="button-container-cart">
+            <button class="Button-PS" onclick="showEmptyCart()">
                 <img src="../../images/triangle-ps.png" alt="PS-Button" class="PS-Button-Image">
-                <span>REST TO DEFAULT</span>
+                <span>RESET TO DEFAULT</span>
             </button>
-            <button class="Button-PS" onclick="window.location.href=checkout.html">
+            <button class="Button-PS" onclick="showCartwithItems()">
                 <img src="../../images/XButtonPS.png" alt="PS-Button" class="PS-Button-Image">
                 <span>TRADE FOR GODS</span>
             </button>
@@ -47,5 +50,21 @@
                 <span>BACK</span>
             </button>
         </div>
+
+    <script>
+        function showEmptyCart(){
+            document.querySelector('.empty-cart-message').style.display = 'block';
+            document.querySelector('.cart-table').style.display = 'none';
+            document.querySelector('.cart-title').style.display = 'none';
+        }
+
+        function showCartwithItems(){
+            console.log('Showing cart!');
+            document.querySelector('.empty-cart-message').style.display = 'none';
+            document.querySelector('.cart-table').style.display = 'table';
+            document.querySelector('.cart-title').style.display = 'block';
+        }
+    </script>
+
 </body>
 </html>
