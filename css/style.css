@@ -143,8 +143,8 @@ body {
     background-position: 10px center;
 }
 .login-form input[type="email"] {
-    background-image: url('../images/Email.png'); 
-    background-size: 45px 45px;
+    background-image: url('../images/email.png'); 
+    background-size: 30px 30px;
 }
 .login-form input[type="password"]{
     background-image: url('../images/FirefliesW.png');
