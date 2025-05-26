@@ -94,9 +94,9 @@ body, html {
     width: 50px;
     height: auto;
     max-width: 100%;
-    display: block;
     transition: transform 0.4s ease-in-out;
     will-change: transform;
+    filter: none;
     display: block;
 }
 
@@ -182,12 +182,18 @@ body, html {
     }
 
     .items-table {
-        width: 100%;
+        min-width: 600px;
         font-size: 0.8em; 
     }
 
     .items-table th, .items-table td {
         padding: 6px; 
+    }
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -238,7 +244,9 @@ body, html {
     height: 30px;
     width: 30px;
     display: block;
-    margin-right: 8px; 
+    margin-right: 8px;
+    filter: none;
+    mix-blend-mode: normal; 
     transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
