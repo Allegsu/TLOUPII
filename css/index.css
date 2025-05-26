@@ -261,7 +261,7 @@ body, html {
     cursor: pointer;
 }
 .Fireflies-Logo{
-    height: 40px;
+    height: auto;
     width: 40px;
     display: block;
     margin-right: 8px;
