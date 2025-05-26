@@ -14,8 +14,8 @@
 </div>
 
 <div>
-    <h1>Navigate The Website!</h1>
-    <img src="./images/elliepizza.gif">
+    <h1>Navigate The Website! (Click on the image)</h1>
+    <a href="https://allegsu.github.io/TLOUPII/"><img src="./images/elliepizza.gif"></a>
     <p>Take a look and dive into the world of <em>The Last of Us Part II</em> you'll find icons and elements inspired directly from the game! Creating the most accurate design required extra effort to overcome some inconsistencies, but thanks to over 80 hours of gameplay and achieving full platinum on PS4, the developer also a passionate fan worked hard to bring it to life.</p>
 </div>
 
