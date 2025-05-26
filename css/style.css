@@ -5,7 +5,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Inter-Thin';
+    src: url('../fonts/Inter/Inter_24pt-Thin.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
 .TLFont {
     font-family: 'Press Gothic Regular', sans-serif;
 }
@@ -141,6 +146,7 @@ body {
     outline: none; 
     background-repeat: no-repeat;
     background-position: 10px center;
+    font-family: 'Inter-Thin', sans-serif;
 }
 .login-form input[type="email"] {
     background-image: url('../images/email.png'); 
@@ -152,7 +158,6 @@ body {
 }
 .login-form input::placeholder{
     color: rgba(255, 255, 255, 0.6);
-    font-style: italic;
     transition: color 0.3s ease-in-out;
 }
 .login-form input:focus::placeholder{
