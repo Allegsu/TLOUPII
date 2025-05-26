@@ -168,7 +168,7 @@ body, html {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
     .flags-images {
         width: 20vw; 
     }
