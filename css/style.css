@@ -149,7 +149,7 @@ body {
     font-family: 'Inter-Thin', sans-serif;
 }
 .login-form input[type="email"] {
-    background-image: url('../images/email.png'); 
+    background-image: url('../images/email_w.png'); 
     background-size: 30px 30px;
 }
 .login-form input[type="password"]{
